@@ -2,6 +2,13 @@
 
 [![BuyMeACoffee](.github/bmc-yellow.svg)](https://www.buymeacoffee.com/jdau)
 
+This fork of [thadius83/bambu-to-snapmaker-u1](https://github.com/thadius83/bambu-to-snapmaker-u1)
+preserves the multiple colors within a single filament when converting Bambu
+projects to Snapmaker U1. It supports split and gradient palettes from any
+filament brand, including custom profiles, and keeps palettes aligned when
+filament slots are remapped. Previously converted files that already lost these
+colors need to be converted again from the original project.
+
 Self-hosted web app that converts Bambu Lab `.3mf` project files into
 Snapmaker U1-compatible `.3mf` files, with experimental support for compatible
 slicer project files from Orca-based slicers, PrusaSlicer, and Cura. The
@@ -25,14 +32,14 @@ Bambu printer, this is the tool for you. Drop the `.3mf` in, get a U1-ready
 | Bare geometry `.3mf` | Experimental | No slicer settings are available, so the converter defaults to the bundled `0.20 Standard` U1 profile. |
 | Sliced `.gcode.3mf` without model geometry | Not supported | These files contain printer-specific plate G-code but no editable model data. Upload the original project `.3mf` instead. |
 
-## Hosted Version
+## Upstream Hosted Version
 
 **<https://u1convert.com>**
 
 ## Quick start 
 
 ```bash
-git clone https://github.com/thadius83/bambu-to-snapmaker-u1.git
+git clone https://github.com/sitnikovv/bambu-to-snapmaker-u1.git
 cd bambu-to-snapmaker-u1
 cp .env.example .env       # safe defaults; no editing needed for first run
 docker compose up --build

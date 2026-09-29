@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Preserve multi-color filament palettes and gradient/split display modes when
   converting Bambu projects to Snapmaker U1, including third-party filaments
   and remapped filament slots.
+- Include bundled filament rules and Bambu reference profiles in Docker images.
 - Prevented geometry-empty output files when users upload sliced G-code 3MFs
   instead of original project files.
 - Improved upload analysis errors so specific backend validation messages are
