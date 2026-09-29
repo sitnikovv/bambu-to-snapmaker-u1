@@ -33,12 +33,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application sources.
 COPY backend/ ./backend/
 COPY profiles/ ./profiles/
+COPY rules/ ./rules/
+COPY bambu_profiles/ ./bambu_profiles/
 
 # Pull in the built frontend.
 COPY --from=frontend-build /build/frontend/dist ./frontend/dist
 
 # Create runtime directories (volumes will be mounted over these).
-RUN mkdir -p /app/user_profiles /app/rules /app/tmp /app/outputs /app/feedback /app/bambu_profiles
+RUN mkdir -p /app/user_profiles /app/rules /app/tmp /app/tmp_failed /app/outputs /app/feedback /app/bambu_profiles
 
 # Environment defaults (override in docker-compose or at run time).
 ENV PYTHONPATH=/app/backend \
